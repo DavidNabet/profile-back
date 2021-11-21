@@ -33,6 +33,7 @@ const typeDefs = `
     type Mutation {
         createProfile(input: ProfileInput): Profile
         updateProfile(_id: ID!, input: ProfileUpdateInput):Profile
+        deleteProfile(_id: ID!): Profile
     }
 `;
 

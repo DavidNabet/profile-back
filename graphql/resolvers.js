@@ -15,5 +15,8 @@ export const resolvers = {
     async updateProfile(parent, { _id, input }) {
       return await Profile.findOneAndUpdate({ _id }, input, { new: true });
     },
+    async deleteProfile(parent, { _id }) {
+      return await Profile.findOneAndRemove({ _id });
+    },
   },
 };
