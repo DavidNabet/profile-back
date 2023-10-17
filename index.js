@@ -6,10 +6,7 @@ import schema from "./graphql/schema";
 import cors from "cors";
 
 // mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGO_LOCAL_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(process.env.MONGO_LOCAL_URI);
 
 const app = express();
 app.use(cors());
